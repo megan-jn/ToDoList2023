@@ -11,6 +11,8 @@
 		44CB332B2A12FC3E000B0CEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB332A2A12FC3E000B0CEC /* ContentView.swift */; };
 		44CB332D2A12FC41000B0CEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CB332C2A12FC41000B0CEC /* Assets.xcassets */; };
 		44CB33302A12FC41000B0CEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CB332F2A12FC41000B0CEC /* Preview Assets.xcassets */; };
+		44CB33372A12FDDF000B0CEC /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB33362A12FDDF000B0CEC /* ToDoItem.swift */; };
+		44CB33392A130004000B0CEC /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB33382A130004000B0CEC /* NewToDoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		44CB332A2A12FC3E000B0CEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44CB332C2A12FC41000B0CEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44CB332F2A12FC41000B0CEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44CB33362A12FDDF000B0CEC /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		44CB33382A130004000B0CEC /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				44CB33282A12FC3E000B0CEC /* ToDoList2023App.swift */,
 				44CB332A2A12FC3E000B0CEC /* ContentView.swift */,
+				44CB33382A130004000B0CEC /* NewToDoView.swift */,
+				44CB33362A12FDDF000B0CEC /* ToDoItem.swift */,
 				44CB332C2A12FC41000B0CEC /* Assets.xcassets */,
 				44CB332E2A12FC41000B0CEC /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				44CB332B2A12FC3E000B0CEC /* ContentView.swift in Sources */,
 				44CB33292A12FC3E000B0CEC /* ToDoList2023App.swift in Sources */,
+				44CB33372A12FDDF000B0CEC /* ToDoItem.swift in Sources */,
+				44CB33392A130004000B0CEC /* NewToDoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
