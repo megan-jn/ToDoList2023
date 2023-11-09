@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewToDoView: View {
     @Binding var toDoItems: [ToDoItem]
+    @Environment(\.managedObjectContext) var context
     @Binding var showNewTask : Bool
     
     @State var title: String
@@ -16,7 +17,7 @@ struct NewToDoView: View {
     var body: some View {
         VStack {
             Text("Add a new task")
-                .font(.title)
+                .font(Font.custom("Montserrat-Bold", size: 26))
                 .fontWeight(.bold)
             
             TextField("Enter the task description", text: $title)
@@ -27,22 +28,33 @@ struct NewToDoView: View {
             
             Toggle(isOn: $isImportant) {
                             Text("Is it important?")
+                    .font(Font.custom("Montserrat-Medium", size: 24))
             }
             .padding()
+            .toggleStyle(SwitchToggleStyle(tint: .orange))
             Button(action: {
-                self.addTask(title: self.title, isImportant: self.isImportant)
+                self.addTask()
                 self.showNewTask = false
             }) {
-                Text("Add")
+                Text("ADD")
+                    .font(Font.custom("Montserrat-Medium", size: 22))
             }
+            .tint(.orange)
             .padding()
         }
     }
-    private func addTask(title: String, isImportant: Bool = false) {
-            
-            let task = ToDoItem(title: title, isImportant: isImportant)
-            toDoItems.append(task)
+    private func addTask() {
+        let task = ToDo(context: context)
+        task.id = UUID()
+        task.title = title
+        task.isImportant = isImportant
+                
+        do {
+                    try context.save()
+        } catch {
+                    print(error)
         }
+    }
 }
 
 struct NewToDoView_Previews: PreviewProvider {
